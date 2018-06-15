@@ -1,0 +1,74 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.example.biz.module1.config.DataSourceOneConfig",
+      "name": "globalConfig1",
+      "sourceMethod": "globalConfiguration1()",
+      "type": "com.baomidou.mybatisplus.entity.GlobalConfiguration"
+    },
+    {
+      "sourceType": "com.example.biz.module1.config.DataSourceOneConfig",
+      "name": "spring.dataSource.druid.datasource1",
+      "sourceMethod": "dataSource1()",
+      "type": "javax.sql.DataSource"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.baomidou.mybatisplus.entity.GlobalConfiguration",
+      "name": "globalConfig1.capital-mode",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.baomidou.mybatisplus.entity.GlobalConfiguration",
+      "name": "globalConfig1.db-column-underline",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.baomidou.mybatisplus.entity.GlobalConfiguration",
+      "name": "globalConfig1.identifier-quote",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.baomidou.mybatisplus.entity.GlobalConfiguration",
+      "name": "globalConfig1.key-generator",
+      "type": "com.baomidou.mybatisplus.incrementer.IKeyGenerator"
+    },
+    {
+      "sourceType": "com.baomidou.mybatisplus.entity.GlobalConfiguration",
+      "name": "globalConfig1.logic-delete-value",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.baomidou.mybatisplus.entity.GlobalConfiguration",
+      "name": "globalConfig1.logic-not-delete-value",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.baomidou.mybatisplus.entity.GlobalConfiguration",
+      "name": "globalConfig1.mapper-registry-cache",
+      "type": "java.util.Set<java.lang.String>"
+    },
+    {
+      "sourceType": "com.baomidou.mybatisplus.entity.GlobalConfiguration",
+      "name": "globalConfig1.meta-object-handler",
+      "type": "com.baomidou.mybatisplus.mapper.MetaObjectHandler"
+    },
+    {
+      "sourceType": "com.baomidou.mybatisplus.entity.GlobalConfiguration",
+      "name": "globalConfig1.refresh",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.baomidou.mybatisplus.entity.GlobalConfiguration",
+      "name": "globalConfig1.sql-injector",
+      "type": "com.baomidou.mybatisplus.mapper.ISqlInjector"
+    },
+    {
+      "sourceType": "com.baomidou.mybatisplus.entity.GlobalConfiguration",
+      "name": "globalConfig1.sql-session-factory",
+      "type": "org.apache.ibatis.session.SqlSessionFactory"
+    }
+  ]
+}

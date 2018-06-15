@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.biz.module1.mapper.GinwaQuanMapper">
+
+    <!-- 开启二级缓存 -->
+    <!--<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>-->
+
+    <select id="queryList" resultType="com.example.biz.module1.entity.GinwaQuanEntity">
+		select * from ginwa_quan
+	</select>
+
+    <select id="queryTotal" resultType="int">
+		select count(*) from ginwa_quan
+	</select>
+
+    <insert id="insert" parameterType="com.example.biz.module1.entity.GinwaQuanEntity">
+		insert into ginwa_quan
+		(
+			`iyhqid`,
+			`syhqmc`,
+			`syhqms`,
+			`dyxq`,
+			`fjeLimit`,
+			`fje`,
+			`manjian`,
+			`enable`
+		)
+		values
+		(
+			#{iyhqid},
+			#{syhqmc},
+			#{syhqms},
+			#{dyxq},
+			#{fjeLimit},
+			#{fje},
+			#{manjian},
+			#{enable}
+		)
+	</insert>
+
+    <update id="update" parameterType="com.example.biz.module1.entity.GinwaQuanEntity">
+        update ginwa_quan
+        <set>
+            <if test="syhqmc != null">`syhqmc` = #{syhqmc}, </if>
+            <if test="syhqms != null">`syhqms` = #{syhqms}, </if>
+            <if test="dyxq != null">`dyxq` = #{dyxq}, </if>
+            <if test="fjeLimit != null">`fjeLimit` = #{fjeLimit}, </if>
+            <if test="fje != null">`fje` = #{fje}, </if>
+            <if test="manjian != null">`manjian` = #{manjian}, </if>
+            <if test="enable != null">`enable` = #{enable}, </if>
+        </set>
+        where iyhqid = #{iyhqid}
+    </update>
+
+    <delete id="delete" parameterType="com.example.biz.module1.entity.GinwaQuanEntity">
+		delete from ginwa_quan where iyhqid = #{iyhqid}
+	</delete>
+
+</mapper>

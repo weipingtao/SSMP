@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo-biz-module1/demo-biz-module1.iml" filepath="$PROJECT_DIR$/demo-biz-module1/demo-biz-module1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-main/demo-main.iml" filepath="$PROJECT_DIR$/demo-main/demo-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-mp-common/spring-boot-mp-common.iml" filepath="$PROJECT_DIR$/spring-boot-mp-common/spring-boot-mp-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-mp-parent.iml" filepath="$PROJECT_DIR$/spring-boot-mp-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-mp-shiro/spring-boot-mp-shiro.iml" filepath="$PROJECT_DIR$/spring-boot-mp-shiro/spring-boot-mp-shiro.iml" />
+    </modules>
+  </component>
+</project>
