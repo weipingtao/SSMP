@@ -8,16 +8,15 @@
       "type": "com.baomidou.mybatisplus.entity.GlobalConfiguration"
     },
     {
-      "sourceType": "com.huitu.mp.shiro.config.ShiroConfig",
-      "name": "redis.shiro",
-      "sourceMethod": "redisManager()",
-      "type": "org.crazycake.shiro.RedisManager"
-    },
-    {
       "sourceType": "com.huitu.mp.shiro.config.ShiroDataSourceConfig",
       "name": "spring.dataSource.druid.shiroDataSource",
       "sourceMethod": "shiroDataSource()",
       "type": "javax.sql.DataSource"
+    },
+    {
+      "sourceType": "com.huitu.mp.shiro.config.RedisProperties",
+      "name": "spring.redis.shiro",
+      "type": "com.huitu.mp.shiro.config.RedisProperties"
     }
   ],
   "properties": [
@@ -83,7 +82,37 @@
     },
     {
       "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "redis.shiro.expire",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "redis.shiro.expire",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
       "name": "redis.shiro.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "redis.shiro.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "redis.shiro.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "redis.shiro.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "redis.shiro.password",
       "type": "java.lang.String"
     },
     {
@@ -98,7 +127,80 @@
     },
     {
       "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "redis.shiro.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "redis.shiro.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
       "name": "redis.shiro.timeout",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "redis.shiro.timeout",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "redis.shiro.timeout",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.huitu.mp.shiro.config.RedisProperties",
+      "defaultValue": 0,
+      "name": "spring.redis.shiro.expire",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "spring.redis.shiro.expire",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.huitu.mp.shiro.config.RedisProperties",
+      "name": "spring.redis.shiro.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "spring.redis.shiro.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.huitu.mp.shiro.config.RedisProperties",
+      "name": "spring.redis.shiro.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "spring.redis.shiro.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.huitu.mp.shiro.config.RedisProperties",
+      "defaultValue": 0,
+      "name": "spring.redis.shiro.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "spring.redis.shiro.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.huitu.mp.shiro.config.RedisProperties",
+      "defaultValue": 0,
+      "name": "spring.redis.shiro.timeout",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "org.crazycake.shiro.RedisManager",
+      "name": "spring.redis.shiro.timeout",
       "type": "java.lang.Integer"
     }
   ]

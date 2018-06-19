@@ -9,6 +9,7 @@ import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.crazycake.shiro.RedisCacheManager;
 import org.crazycake.shiro.RedisManager;
 import org.crazycake.shiro.RedisSessionDAO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,6 +24,8 @@ import java.util.Map;
 @Configuration
 public class ShiroConfig {
 
+    @Autowired
+    private RedisProperties rp;
 
     @Bean
     public ShiroFilterFactoryBean shirFilter(SecurityManager securityManager) {
@@ -33,6 +36,8 @@ public class ShiroConfig {
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<String, String>();
         //注意过滤器配置顺序 不能颠倒
         //配置退出 过滤器,其中的具体的退出代码Shiro已经替我们实现了，登出后跳转配置的loginUrl
+        filterChainDefinitionMap.put("/sysUser/test1", "anon");
+        filterChainDefinitionMap.put("/sysUser/test2", "anon");
         filterChainDefinitionMap.put("/logout", "logout");
         // 配置不会被拦截的链接 顺序判断
         filterChainDefinitionMap.put("/druid/**", "anon");
@@ -99,9 +104,17 @@ public class ShiroConfig {
      *
      * @return
      */
-    @ConfigurationProperties(prefix = "redis.shiro")
-    public RedisManager redisManager() {
-        return new RedisManager();
+
+    public RedisManager redisManager()
+    {
+//        return new RedisManager();
+        RedisManager redisManager = new RedisManager();
+        redisManager.setHost(rp.getHost());
+        redisManager.setPort(rp.getPort());
+        redisManager.setExpire(rp.getExpire());// 配置缓存过期时间
+//        redisManager.setTimeout(rp.getTimeout());
+        redisManager.setPassword(rp.getPassword());
+        return redisManager;
     }
 
     /**

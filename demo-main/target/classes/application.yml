@@ -1,3 +1,7 @@
+server:
+  port: 8085
+  context-path: /SSMP/
+
 spring:
   http:
     encoding:
@@ -6,6 +10,14 @@ spring:
       force: true
   aop:
     auto: true
+
+  redis:
+    shiro:
+      host: 127.0.0.1
+      port: 6379
+      timeout: 6000
+      password: 123456
+      expire: 18000
 
 #数据源
   dataSource:
@@ -67,10 +79,3 @@ globalConfigShrio:
   dbColumnUnderline: true
     #刷新mapper 调试神器
   refreshMapper: true
-
-redis:
-  shiro:
-    host: 127.0.0.1
-    port: 6379
-    timeout: 0
-    password: 123456
